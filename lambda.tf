@@ -30,8 +30,8 @@ resource "aws_lambda_function" "function" {
 
 data "archive_file" "lambda_code" {
   type        = "zip"
-  source_file = "${path.module}/lambda/dist/index.js"
-  output_path = "${path.module}/lambda/dist/index.zip"
+  source_file = "${path.module}/lambda/dist/upload.js"
+  output_path = "${path.module}/lambda/dist/upload.zip"
 }
 
 #

@@ -17,7 +17,7 @@ resource "aws_lambda_function" "function" {
 
   environment {
     variables = {
-      UploadBucket = var.file_uploads_bucket
+      UPLOAD_BUCKET = var.file_uploads_bucket
     }
   }
 

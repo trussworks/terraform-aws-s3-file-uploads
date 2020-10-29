@@ -18,7 +18,7 @@ export async function getPresignedUrl(event: APIGatewayEvent): Promise<APIGatewa
 async function getUploadUrl(): Promise<string> {
     let s3 = new S3();
     let params = {
-        Bucket: process.env.S3_BUCKET,
+        Bucket: process.env.UPLOAD_BUCKET,
         Key: 'test.jpg',
         Expires: 60, // 60 second expiry on URL
     }

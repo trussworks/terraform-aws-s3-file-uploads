@@ -70,7 +70,7 @@ data "aws_iam_policy_document" "lambda_execution_policy" {
     actions = [
       "s3:GetObject",
       "s3:PutObject",
-      "s3:PubObjectAcl",
+      "s3:PutObjectAcl",
     ]
 
     resources = ["arn:aws:s3:::${module.file_uploads_s3_bucket.name}/*"]

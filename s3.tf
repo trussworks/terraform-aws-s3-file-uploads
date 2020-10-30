@@ -3,6 +3,7 @@
 #
 module "file_uploads_s3_bucket" {
   source         = "trussworks/s3-private-bucket/aws"
+  version        = "~>2.1.0"
   bucket         = var.file_uploads_bucket
   logging_bucket = module.file_uploads_s3_logging_bucket.aws_logs_bucket
 
@@ -22,7 +23,7 @@ locals {
 # we use a separate access logging bucket for every environment
 module "file_uploads_s3_logging_bucket" {
   source  = "trussworks/logs/aws"
-  version = "4.1.1"
+  version = "~> 8.0.0"
   region  = var.region
 
   s3_bucket_name = local.file_uploads_s3_bucket_logs

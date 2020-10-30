@@ -1,13 +1,18 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
     "esModuleInterop": true,
-    "target": "ES2018",
-    "noImplicitAny": true,
+    "module": "CommonJS",
     "moduleResolution": "node",
+    "noImplicitAny": true,
     "outDir": "./dist",
-    "sourceMap": true
+    "sourceMap": true,
+    "target": "ES2018"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ],
+  "include": [
+    "src"
+  ]
 }

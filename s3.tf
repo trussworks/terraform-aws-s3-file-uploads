@@ -17,7 +17,7 @@ module "file_uploads_s3_bucket" {
 }
 
 locals {
-  file_uploads_s3_bucket_logs = "${var.application_name}-${var.environment}-${var.file_uploads_s3_bucket}-logs"
+  file_uploads_s3_bucket_logs = "${var.application_name}-${var.environment}-${var.file_uploads_bucket}-logs"
 }
 
 # we use a separate access logging bucket for every environment

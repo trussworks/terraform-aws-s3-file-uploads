@@ -7,8 +7,8 @@ locals {
 }
 
 resource "aws_lambda_function" "function" {
-  filename         = data.archive_file.function_code.output_path
-  source_code_hash = data.archive_file.function_code.output_base64sha256
+  filename         = data.archive_file.lambda_code.output_path
+  source_code_hash = data.archive_file.lambda_code.output_base64sha256
   function_name    = local.lambda_function_name
   publish          = true
   role             = aws_iam_role.lambda_role.arn

@@ -1,7 +1,7 @@
 
 # terraform-aws-s3-upload
 
-Creates the relevant infrastructure needed to handle AwS S3 file uploads.
+Creates the relevant infrastructure needed to handle AWS S3 file uploads.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

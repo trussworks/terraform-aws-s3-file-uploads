@@ -6,7 +6,7 @@ locals {
   lambda_function_name = "getPresignedUrl"
 }
 
-resource "aws_lambda_function" "function" {
+resource "aws_lambda_function" "get_presigned_url" {
   filename         = data.archive_file.lambda_code.output_path
   source_code_hash = data.archive_file.lambda_code.output_base64sha256
   function_name    = local.lambda_function_name
@@ -76,5 +76,24 @@ data "aws_iam_policy_document" "lambda_execution_policy" {
     resources = ["arn:aws:s3:::${module.file_uploads_s3_bucket.name}/*"]
   }
 }
+
+#
+# API Gateway for lambda
+#
+resource "aws_apigatewayv2_api" "get_presigned_url" {
+  name          = local.lambda_function_name
+  protocol_type = "HTTP"
+}
+
+resource "aws_apigatewayv2_integration" "get_presigned_url" {
+  api_id           = aws_apigatewayv2_api.get_presigned_url.id
+  integration_type = "AWS_PROXY"
+  description      = "API gateway integration for file uploads"
+
+  connection_type    = "INTERNET"
+  integration_method = "GET"
+  integration_uri    = aws_lambda_function.get_presigned_url.invoke_arn
+}
+
 
 

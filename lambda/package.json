@@ -15,7 +15,8 @@
   "main": "upload.js",
   "name": "s3-file-uploads",
   "scripts": {
-    "compile": "tsc"
+    "build": "tsc",
+    "postbuild": "cp -R node_modules dist/"
   },
   "version": "1.0.0"
 }

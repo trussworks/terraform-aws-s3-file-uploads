@@ -85,6 +85,11 @@ resource "aws_apigatewayv2_api" "get_presigned_url" {
   protocol_type = "HTTP"
 }
 
+resource "aws_apigatewayv2_route" "get_presigned_url" {
+  api_id    = aws_apigatewayv2_api.get_presigned_url.id
+  route_key = "GET /presignedurl"
+}
+
 resource "aws_apigatewayv2_integration" "get_presigned_url" {
   api_id           = aws_apigatewayv2_api.get_presigned_url.id
   integration_type = "AWS_PROXY"
@@ -94,6 +99,8 @@ resource "aws_apigatewayv2_integration" "get_presigned_url" {
   integration_method = "GET"
   integration_uri    = aws_lambda_function.get_presigned_url.invoke_arn
 }
+
+
 
 
 

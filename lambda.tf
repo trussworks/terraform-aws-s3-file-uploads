@@ -100,7 +100,17 @@ resource "aws_apigatewayv2_integration" "get_presigned_url" {
   integration_uri    = aws_lambda_function.get_presigned_url.invoke_arn
 }
 
+#
+# Okta JWT auth for lambda
+#
+resource "aws_apigatewayv2_authorizer" "get_presigned_url" {
+  api_id           = aws_apigatewayv2_api.get_presigned_url.id
+  authorizer_type  = "JWT"
+  identity_sources = ["$request.header.Authorization"]
+  name             = "${local.lambda_function_name}-authorizer"
 
-
-
-
+  jwt_configuration {
+    audience = [var.jwt_auth_audience]
+    issuer   = var.jwt_auth_issuer
+  }
+}

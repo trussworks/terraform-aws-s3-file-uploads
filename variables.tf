@@ -32,3 +32,12 @@ variable "cors_rules" {
   default     = []
 }
 
+variable "jwt_auth_issuer" {
+  description = "The url to the jwt issuer to verify authorization to the lambda"
+  type        = string
+}
+
+variable "jwt_auth_audience" {
+  description = "The jwt audience used to verify authorization to the lambda"
+  type        = string
+}

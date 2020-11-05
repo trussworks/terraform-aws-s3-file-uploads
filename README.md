@@ -26,6 +26,8 @@ Creates the relevant infrastructure needed to handle AWS S3 file uploads.
 | cors\_rules | List of maps containing rules for Cross-Origin Resource Sharing. | `list(any)` | `[]` | no |
 | environment | Environment level. | `string` | `"dev"` | no |
 | file\_uploads\_bucket | The name of the S3 bucket used to store the uploads. | `string` | n/a | yes |
+| jwt\_auth\_audience | The jwt audience used to verify authorization to the lambda | `string` | n/a | yes |
+| jwt\_auth\_issuer | The url to the jwt issuer to verify authorization to the lambda | `string` | n/a | yes |
 | region | Application region. | `string` | `"us-west-2"` | no |
 | tags | A map of tags to add to all resources. | `map(string)` | `{}` | no |
 

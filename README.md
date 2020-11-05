@@ -23,6 +23,7 @@ Creates the relevant infrastructure needed to handle AWS S3 file uploads.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | application\_name | The name of the application | `string` | n/a | yes |
+| authorization\_type | The type of authorization used for the lambda | `string` | `"JWT"` | no |
 | cors\_rules | List of maps containing rules for Cross-Origin Resource Sharing. | `list(any)` | `[]` | no |
 | environment | Environment level. | `string` | `"dev"` | no |
 | file\_uploads\_bucket | The name of the S3 bucket used to store the uploads. | `string` | n/a | yes |

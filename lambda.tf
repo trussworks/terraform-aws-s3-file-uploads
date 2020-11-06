@@ -90,6 +90,7 @@ resource "aws_apigatewayv2_route" "get_presigned_url" {
   route_key = "GET /presignedurl"
 
   authorization_type = var.authorization_type
+  authorizer_id      = aws_apigatewayv2_authorizer.get_presigned_url.id
 }
 
 resource "aws_apigatewayv2_integration" "get_presigned_url" {

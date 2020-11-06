@@ -94,13 +94,22 @@ resource "aws_apigatewayv2_route" "get_presigned_url" {
 }
 
 resource "aws_apigatewayv2_integration" "get_presigned_url" {
-  api_id           = aws_apigatewayv2_api.get_presigned_url.id
-  integration_type = "HTTP_PROXY"
-  description      = "API gateway integration for file uploads"
+  api_id             = aws_apigatewayv2_api.get_presigned_url.id
+  integration_type   = "AWS_PROXY"
+  integration_method = "POST"
+  description        = "API gateway integration for file uploads"
 
-  connection_type    = "INTERNET"
-  integration_method = "GET"
-  integration_uri    = aws_lambda_function.get_presigned_url.invoke_arn
+  connection_type = "INTERNET"
+  uri             = aws_lambda_function.get_presigned_url.invoke_arn
+}
+
+resource "aws_apigatewayv2_deployment" "get_presigned_url" {
+  api_id      = aws_apigatewayv2_route.get_presigned_url.api_id
+  description = "Deployment for API gateway in front of file upload lambda"
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 #

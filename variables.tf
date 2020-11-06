@@ -31,19 +31,3 @@ variable "cors_rules" {
   type        = list(any)
   default     = []
 }
-
-variable "authorization_type" {
-  description = "The type of authorization used for the lambda"
-  type        = string
-  default     = "JWT"
-}
-
-variable "jwt_auth_issuer" {
-  description = "The url to the jwt issuer to verify authorization to the lambda"
-  type        = string
-}
-
-variable "jwt_auth_audience" {
-  description = "The jwt audience used to verify authorization to the lambda"
-  type        = string
-}

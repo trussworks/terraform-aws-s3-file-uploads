@@ -95,7 +95,7 @@ resource "aws_apigatewayv2_route" "get_presigned_url" {
 
 resource "aws_apigatewayv2_integration" "get_presigned_url" {
   api_id           = aws_apigatewayv2_api.get_presigned_url.id
-  integration_type = "AWS_PROXY"
+  integration_type = "HTTP_PROXY"
   description      = "API gateway integration for file uploads"
 
   connection_type    = "INTERNET"

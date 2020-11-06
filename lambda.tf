@@ -100,7 +100,7 @@ resource "aws_apigatewayv2_integration" "get_presigned_url" {
   description        = "API gateway integration for file uploads"
 
   connection_type = "INTERNET"
-  uri             = aws_lambda_function.get_presigned_url.invoke_arn
+  integration_uri = aws_lambda_function.get_presigned_url.invoke_arn
 }
 
 resource "aws_apigatewayv2_deployment" "get_presigned_url" {

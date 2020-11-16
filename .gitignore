@@ -2,7 +2,6 @@
 terraform.tfstate.*.backup
 terraform.tfstate.backup
 .envrc.local
-*.zip
 
 **/node_modules
 .DS_Store

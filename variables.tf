@@ -20,6 +20,11 @@ variable "file_uploads_bucket" {
   description = "The name of the S3 bucket used to store the uploads."
 }
 
+variable "virus_scanning_bucket" {
+  type        = string
+  description = "The name of the S3 bucket used to store virus scanning tools."
+}
+
 variable "tags" {
   type        = map(string)
   description = "A map of tags to add to all resources."

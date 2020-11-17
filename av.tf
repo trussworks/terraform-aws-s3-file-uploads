@@ -2,7 +2,7 @@ module "s3_anti_virus" {
   source  = "trussworks/s3-anti-virus/aws"
   version = "~>2.1.0"
 
-  lambda_s3_bucket = var.virus_scanning_bucket
+  lambda_s3_bucket = var.lambda_s3_bucket
   lambda_version   = "2.0.0"
   lambda_package   = "anti-virus"
 
@@ -33,13 +33,3 @@ module "virus_scan_s3_bucket" {
     Automation  = "Terraform"
   }
 }
-
-#
-# S3 object containing the lambda
-#
-resource "aws_s3_bucket_object" "av_lambda" {
-  bucket = var.virus_scanning_bucket
-  key    = "anti-virus/${local.antivirus_version}/anti-virus.zip"
-  source = "lambda/lambda-${local.antivirus_version}.zip"
-}
-

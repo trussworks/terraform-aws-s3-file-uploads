@@ -25,6 +25,11 @@ variable "virus_scanning_bucket" {
   description = "The name of the S3 bucket used to store virus scanning tools."
 }
 
+variable "lambda_s3_bucket" {
+  type        = string
+  description = "The name of the S3 bucket where the lambda build artifact is stored"
+}
+
 variable "tags" {
   type        = map(string)
   description = "A map of tags to add to all resources."

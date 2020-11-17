@@ -3,9 +3,9 @@
 
 Creates the relevant infrastructure needed to handle AWS S3 file uploads.
 
-## Anti-Virus Scanning
+## Anti-virus Scanning
 
-Anti-Virus scanning is handled via an AWS Lambda function using
+Anti-virus scanning is handled via an AWS Lambda function using
 [bucket-antivirus-function](https://github.com/upsidetravel/bucket-antivirus-function).
 
 This package will need to be made and uploaded to wherever you keep Lambda artifacts. This bucket corresponds

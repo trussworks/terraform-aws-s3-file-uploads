@@ -11,6 +11,9 @@ module "s3_anti_virus" {
 
   av_definition_s3_bucket = module.virus_scan_s3_bucket.name
 
+  av_status_sns_arn           = var.av_status_sns_arn
+  av_status_sns_publish_clean = false
+
   tags = {
     Name        = "S3 bucket anti-virus scanning"
     Environment = var.environment

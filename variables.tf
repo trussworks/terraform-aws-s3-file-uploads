@@ -30,6 +30,11 @@ variable "lambda_s3_bucket" {
   description = "The name of the S3 bucket where the lambda build artifact is stored"
 }
 
+variable "av_status_sns_arn" {
+  type        = string
+  description = "SNS topic ARN to publish scan results to"
+}
+
 variable "tags" {
   type        = map(string)
   description = "A map of tags to add to all resources."

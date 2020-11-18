@@ -45,6 +45,7 @@ aws s3 cp bucket-antivirus-function/build/lambda.zip "s3://${lambda_s3_bucket}/a
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | application\_name | The name of the application | `string` | n/a | yes |
+| av\_status\_sns\_arn | SNS topic ARN to publish scan results to | `string` | n/a | yes |
 | cors\_rules | List of maps containing rules for Cross-Origin Resource Sharing. | `list(any)` | `[]` | no |
 | environment | Environment level. | `string` | `"dev"` | no |
 | file\_uploads\_bucket | The name of the S3 bucket used to store the uploads. | `string` | n/a | yes |

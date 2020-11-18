@@ -9,7 +9,7 @@ module "s3_anti_virus" {
   av_update_minutes = "180"
   av_scan_buckets   = [module.file_uploads_s3_bucket.name]
 
-  av_definition_s3_bucket = var.virus_scanning_bucket
+  av_definition_s3_bucket = module.virus_scan_s3_bucket.name
 
   tags = {
     Name        = "S3 bucket anti-virus scanning"

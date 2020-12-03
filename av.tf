@@ -1,6 +1,6 @@
 module "s3_anti_virus" {
   source  = "trussworks/s3-anti-virus/aws"
-l version = "~>3.0.0"
+  version = "~>3.0.0"
 
   lambda_s3_bucket = var.lambda_s3_bucket
   lambda_version   = "2.0.0"

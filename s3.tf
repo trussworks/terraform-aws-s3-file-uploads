@@ -20,7 +20,6 @@ module "file_uploads_s3_bucket" {
 module "file_uploads_s3_logging_bucket" {
   source  = "trussworks/logs/aws"
   version = "~> 10.0.0"
-  region  = var.region
 
   s3_bucket_name = local.file_uploads_s3_bucket_logs
 

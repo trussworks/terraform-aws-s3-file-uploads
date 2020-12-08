@@ -3,6 +3,12 @@
 
 Creates the relevant infrastructure needed to handle AWS S3 file uploads.
 
+## Terraform Versions
+
+Terraform 0.13. Pin module version to ~> x.x. Submit pull-requests to main branch.
+
+Terraform 0.12. Pin module version to ~> x.x. Submit pull-requests to terraform012 branch.
+
 ## Anti-virus Scanning
 
 Anti-virus scanning is handled via an AWS Lambda function using
@@ -31,14 +37,14 @@ aws s3 cp bucket-antivirus-function/build/lambda.zip "s3://${lambda_s3_bucket}/a
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 0.12.0 |
-| aws | ~> 2.70 |
+| terraform | ~> 0.13.0 |
+| aws | ~> 3.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | ~> 2.70 |
+| aws | ~> 3.0 |
 
 ## Inputs
 

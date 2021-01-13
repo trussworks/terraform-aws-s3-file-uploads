@@ -21,7 +21,8 @@ module "file_uploads_s3_logging_bucket" {
   source  = "trussworks/logs/aws"
   version = "~> 10.0.0"
 
-  s3_bucket_name = local.file_uploads_s3_bucket_logs
+  s3_bucket_name          = local.file_uploads_s3_bucket_logs
+  s3_log_bucket_retention = var.s3_logs_retention_days
 
   default_allow = false
 

@@ -46,3 +46,15 @@ variable "cors_rules" {
   type        = list(any)
   default     = []
 }
+
+variable "cloudwatch_logs_retention_days" {
+  description = "Number of days to keep logs in AWS CloudWatch."
+  type        = string
+  default     = 90
+}
+
+variable "s3_logs_retention_days" {
+  description = "Number of days to keep logs in S3."
+  type        = string
+  default     = 90
+}

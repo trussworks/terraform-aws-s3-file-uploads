@@ -14,6 +14,8 @@ module "s3_anti_virus" {
   av_status_sns_arn           = var.av_status_sns_arn
   av_status_sns_publish_clean = false
 
+  cloudwatch_logs_retention_days = var.cloudwatch_logs_retention_days
+
   tags = {
     Name        = "S3 bucket anti-virus scanning"
     Environment = var.environment

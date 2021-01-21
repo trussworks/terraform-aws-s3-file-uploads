@@ -36,9 +36,9 @@ variable "logging_bucket" {
 }
 
 variable "create_logging_bucket" {
-  type = bool
+  type        = bool
   description = "Whether to create a new bucket for S3 access logs."
-  default = false
+  default     = false
 }
 
 variable "av_status_sns_arn" {

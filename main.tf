@@ -8,5 +8,5 @@ data "aws_caller_identity" "current" {}
 data "aws_partition" "current" {}
 
 locals {
-  antivirus_version           = "2.0.0"
+  antivirus_version = "2.0.0"
 }

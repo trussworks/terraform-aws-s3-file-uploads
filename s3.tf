@@ -18,7 +18,7 @@ module "file_uploads_s3_bucket" {
 
 # we use a separate access logging bucket for every environment
 module "file_uploads_s3_logging_bucket" {
-  count = var.create_logging_bucket ? 1 : 0
+  count   = var.create_logging_bucket ? 1 : 0
   source  = "trussworks/logs/aws"
   version = "~> 10.0.0"
 

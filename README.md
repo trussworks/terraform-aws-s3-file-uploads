@@ -54,9 +54,11 @@ aws s3 cp bucket-antivirus-function/build/lambda.zip "s3://${lambda_s3_bucket}/a
 | av\_status\_sns\_arn | SNS topic ARN to publish scan results to | `string` | n/a | yes |
 | cloudwatch\_logs\_retention\_days | Number of days to keep logs in AWS CloudWatch. | `string` | `90` | no |
 | cors\_rules | List of maps containing rules for Cross-Origin Resource Sharing. | `list(any)` | `[]` | no |
+| create\_logging\_bucket | Whether to create a new bucket for S3 access logs. | `bool` | `false` | no |
 | environment | Environment level. | `string` | `"dev"` | no |
 | file\_uploads\_bucket | The name of the S3 bucket used to store the uploads. | `string` | n/a | yes |
 | lambda\_s3\_bucket | The name of the S3 bucket where the lambda build artifact is stored | `string` | n/a | yes |
+| logging\_bucket | The name of the S3 bucket used for S3 access logs. | `string` | n/a | yes |
 | region | Application region. | `string` | `"us-west-2"` | no |
 | s3\_logs\_retention\_days | Number of days to keep logs in S3. | `string` | `90` | no |
 | tags | A map of tags to add to all resources. | `map(string)` | `{}` | no |

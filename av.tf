@@ -21,6 +21,10 @@ module "s3_anti_virus" {
     Environment = var.environment
     Automation  = "Terraform"
   }
+
+  depends_on = [
+    module.file_uploads_s3_bucket,
+  ]
 }
 
 #

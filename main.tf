@@ -8,5 +8,6 @@ data "aws_caller_identity" "current" {}
 data "aws_partition" "current" {}
 
 locals {
-  antivirus_version = "2.0.0"
+  file_uploads_s3_bucket_logs = var.logging_bucket == "" ? "${var.application_name}-${var.environment}-${var.file_uploads_bucket}-logs" : var.logging_bucket
+  antivirus_version           = "2.0.0"
 }

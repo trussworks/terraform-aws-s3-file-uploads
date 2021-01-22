@@ -33,6 +33,7 @@ variable "lambda_s3_bucket" {
 variable "logging_bucket" {
   type        = string
   description = "The name of the S3 bucket used for S3 access logs."
+  default     = ""
 }
 
 variable "create_logging_bucket" {

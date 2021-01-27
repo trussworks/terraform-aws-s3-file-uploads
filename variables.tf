@@ -30,6 +30,18 @@ variable "lambda_s3_bucket" {
   description = "The name of the S3 bucket where the lambda build artifact is stored"
 }
 
+variable "logging_bucket" {
+  type        = string
+  description = "The name of the S3 bucket used for S3 access logs."
+  default     = ""
+}
+
+variable "create_logging_bucket" {
+  type        = bool
+  description = "Whether to create a new bucket for S3 access logs."
+  default     = false
+}
+
 variable "av_status_sns_arn" {
   type        = string
   description = "SNS topic ARN to publish scan results to"

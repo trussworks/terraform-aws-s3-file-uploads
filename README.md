@@ -46,6 +46,23 @@ aws s3 cp bucket-antivirus-function/build/lambda.zip "s3://${lambda_s3_bucket}/a
 |------|---------|
 | aws | ~> 3.0 |
 
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| file_uploads_s3_bucket | trussworks/s3-private-bucket/aws | ~>3.2.0 |
+| file_uploads_s3_logging_bucket | trussworks/logs/aws | ~> 10.0.0 |
+| s3_anti_virus | trussworks/s3-anti-virus/aws | ~>3.0.0 |
+| virus_scan_s3_bucket | trussworks/s3-private-bucket/aws | ~>3.2.0 |
+
+## Resources
+
+| Name |
+|------|
+| [aws_caller_identity](https://registry.terraform.io/providers/hashicorp/aws/3.0/docs/data-sources/caller_identity) |
+| [aws_partition](https://registry.terraform.io/providers/hashicorp/aws/3.0/docs/data-sources/partition) |
+| [aws_region](https://registry.terraform.io/providers/hashicorp/aws/3.0/docs/data-sources/region) |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -66,6 +83,7 @@ aws s3 cp bucket-antivirus-function/build/lambda.zip "s3://${lambda_s3_bucket}/a
 
 ## Outputs
 
-No output.
-
+| Name | Description |
+|------|-------------|
+| file\_uploads\_bucket\_arn | ARN of the file uploads bucket |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

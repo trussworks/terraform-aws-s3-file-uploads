@@ -83,5 +83,7 @@ aws s3 cp bucket-antivirus-function/build/lambda.zip "s3://${lambda_s3_bucket}/a
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_file_uploads_bucket_arn"></a> [file\_uploads\_bucket\_arn](#output\_file\_uploads\_bucket\_arn) | ARN of the file uploads bucket |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

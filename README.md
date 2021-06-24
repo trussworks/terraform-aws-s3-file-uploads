@@ -50,10 +50,10 @@ aws s3 cp bucket-antivirus-function/build/lambda.zip "s3://${lambda_s3_bucket}/a
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_file_uploads_s3_bucket"></a> [file\_uploads\_s3\_bucket](#module\_file\_uploads\_s3\_bucket) | trussworks/s3-private-bucket/aws | ~>3.2.0 |
-| <a name="module_file_uploads_s3_logging_bucket"></a> [file\_uploads\_s3\_logging\_bucket](#module\_file\_uploads\_s3\_logging\_bucket) | trussworks/logs/aws | ~> 10.0.0 |
-| <a name="module_s3_anti_virus"></a> [s3\_anti\_virus](#module\_s3\_anti\_virus) | trussworks/s3-anti-virus/aws | ~>3.0.0 |
-| <a name="module_virus_scan_s3_bucket"></a> [virus\_scan\_s3\_bucket](#module\_virus\_scan\_s3\_bucket) | trussworks/s3-private-bucket/aws | ~>3.2.0 |
+| <a name="module_file_uploads_s3_bucket"></a> [file\_uploads\_s3\_bucket](#module\_file\_uploads\_s3\_bucket) | trussworks/s3-private-bucket/aws | ~>3.5.0 |
+| <a name="module_file_uploads_s3_logging_bucket"></a> [file\_uploads\_s3\_logging\_bucket](#module\_file\_uploads\_s3\_logging\_bucket) | trussworks/logs/aws | ~> 10.3.0 |
+| <a name="module_s3_anti_virus"></a> [s3\_anti\_virus](#module\_s3\_anti\_virus) | trussworks/s3-anti-virus/aws | ~>3.0.1 |
+| <a name="module_virus_scan_s3_bucket"></a> [virus\_scan\_s3\_bucket](#module\_virus\_scan\_s3\_bucket) | trussworks/s3-private-bucket/aws | ~>3.5.0 |
 
 ## Resources
 

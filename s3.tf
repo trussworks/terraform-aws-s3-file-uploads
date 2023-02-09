@@ -33,4 +33,3 @@ module "file_uploads_s3_logging_bucket" {
 
   }
 }
-

@@ -32,7 +32,7 @@ VERSION=2.0.0
 aws s3 cp bucket-antivirus-function/build/lambda.zip "s3://${lambda_s3_bucket}/anti-virus/${VERSION}/anti-virus.zip"
 ```
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -86,4 +86,4 @@ aws s3 cp bucket-antivirus-function/build/lambda.zip "s3://${lambda_s3_bucket}/a
 | Name | Description |
 |------|-------------|
 | file\_uploads\_bucket\_arn | ARN of the file uploads bucket |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->

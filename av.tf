@@ -32,7 +32,7 @@ module "s3_anti_virus" {
 #
 module "virus_scan_s3_bucket" {
   source         = "trussworks/s3-private-bucket/aws"
-  version        = "~> 3.7.0"
+  version        = "~> 4.3.0"
   bucket         = var.virus_scanning_bucket
   logging_bucket = var.create_logging_bucket ? module.file_uploads_s3_logging_bucket.aws_logs_bucket : local.file_uploads_s3_bucket_logs
 

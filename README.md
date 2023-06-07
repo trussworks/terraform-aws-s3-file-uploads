@@ -32,7 +32,7 @@ aws s3 cp bucket-antivirus-function/build/lambda.zip "s3://${lambda_s3_bucket}/a
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.13.0 |
+| terraform | >= 1.0 |
 | aws | >= 3.0 |
 
 ## Providers

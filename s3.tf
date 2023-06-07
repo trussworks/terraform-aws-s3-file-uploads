@@ -19,7 +19,7 @@ module "file_uploads_s3_bucket" {
 module "file_uploads_s3_logging_bucket" {
   count   = var.create_logging_bucket ? 1 : 0
   source  = "trussworks/logs/aws"
-  version = "~> 14.2.0"
+  version = "~> 15.0.0"
 
   s3_bucket_name          = local.file_uploads_s3_bucket_logs
   s3_log_bucket_retention = var.s3_logs_retention_days

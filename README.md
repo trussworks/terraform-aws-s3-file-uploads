@@ -46,7 +46,7 @@ aws s3 cp bucket-antivirus-function/build/lambda.zip "s3://${lambda_s3_bucket}/a
 | Name | Source | Version |
 |------|--------|---------|
 | file\_uploads\_s3\_bucket | trussworks/s3-private-bucket/aws | ~> 4.3.0 |
-| file\_uploads\_s3\_logging\_bucket | trussworks/logs/aws | ~> 14.2.0 |
+| file\_uploads\_s3\_logging\_bucket | trussworks/logs/aws | ~> 14.3.0 |
 | s3\_anti\_virus | trussworks/s3-anti-virus/aws | ~> 3.2.0 |
 | virus\_scan\_s3\_bucket | trussworks/s3-private-bucket/aws | ~> 4.3.0 |
 

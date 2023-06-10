@@ -3,7 +3,7 @@
 #
 module "file_uploads_s3_bucket" {
   source         = "trussworks/s3-private-bucket/aws"
-  version        = "~> 4.3.0"
+  version        = "~> 7.0.0"
   bucket         = var.file_uploads_bucket
   logging_bucket = var.create_logging_bucket ? module.file_uploads_s3_logging_bucket.aws_logs_bucket : local.file_uploads_s3_bucket_logs
 
